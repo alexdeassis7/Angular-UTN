@@ -4,10 +4,13 @@ import { NgModule } from '@angular/core';
 //este import nos permite comunicarnos mediante peticiones http
 import{HttpClientModule} from '@angular/common/http';
 
+//importamos los formularios reactivos
+//import{ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //importamos nuestro servicio 
 import{BikeService} from './services/bike.service';
+import { AdminComponent } from './components/admin/admin.component';
 //decorador NG module indentifica una clase como 
 //modulo de angular ,esto le dice a Angular como debe 
 //compilar e iniciar la aplicacion 
@@ -15,12 +18,14 @@ import{BikeService} from './services/bike.service';
 @NgModule({
   //dentro de declarations ingresamos los componentes de la app
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule//agrego el client module a los imports
+AppRoutingModule,
+    HttpClientModule,
+    //ReactiveFormsModule agrego el client module a los imports
   ],
  //agregamos el servicio al array de Providers
   providers: [BikeService],
