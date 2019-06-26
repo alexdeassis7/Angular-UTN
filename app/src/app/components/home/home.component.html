@@ -1,0 +1,53 @@
+<div class="container">
+<!-- indicamos que estamos utilizando los formularios reactivos
+y llamamos   al metodo submitRegistration para cuando 
+se precione el boton emviar -->
+<form [formGroup]="bikeform" (ngSubmit)="submitRegistration()" novalidate>
+ <!-- validamos si debemos mostrar el mensaje o no  -->
+  <div *ngIf="validMessage != ''">
+    <h3 class="has-info">{{validMessage}}</h3>
+  </div>
+<!-- atributos del formulario , los uno con el .ts 
+mediante el formcontrol name --> 
+<div class="form-group">
+  <label>Buyer Name</label>
+  <input type="text" class="form-control" formControlName="name" required autofocus/>
+</div>
+<div class="form-group">
+  <label>Email</label>
+  <input type="email" class="form-control" formControlName="email" required/>
+</div>
+<div class="form-group">
+  <label>Phone</label>
+  <input type="text" class="form-control" formControlName="phone" required/>
+</div>
+<div class="form-group">
+  <label>Bike Model</label>
+  <select class="form-control" formControlName="model" required>
+    <option value="">Please Select a Bike</option>
+    <!-- utilizamos un ngfor para recorrer los distintos modelos de bike -->
+    <option *ngFor="let m of models"[value]="m">
+      {{m}}
+    </option>
+  </select>
+</div>
+<div class="form-group">
+  <label>Bike serial Number</label>
+  <input type="text" class="form-control" formControlName="serialNumber" required/>
+</div>
+<div class="form-group">
+  <label>Purchase Price</label>
+  <input type="text" class="form-control" formControlName="purchasePrice" required/>
+</div>
+<div class="form-group">
+  <label>purchase Date</label>
+  <input type="text" class="form-control" formControlName="purchaseDate" required/>
+</div>
+<div class="form-group">
+  <label>Contact (true o false)</label>
+  <input type="boolean" class="form-control" formControlName="contact" required/>
+</div>
+<!-- boton de envio de formulario -->
+<button type="submit" class="btn btn-primary">submit</button>
+</form>
+</div>

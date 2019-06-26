@@ -21,10 +21,9 @@ public bikes;
     //llamamos al servicio de bikes que devuelve un 
     //observable y nos suscribimos a ello
     this.bikeService.getBikes().subscribe(
-      data => {this.bikes =data },//obtenemos los datos 
+      data => {this.bikes = data },//obtenemos los datos 
        err => {console.error(err)},//obtengo un error
-       ()=> console.log('bikes loaded')//cerramos session en 
-      //la consola 
+       ()=> console.log('bikes loaded')//cerramos session en la consola 
     );
   }
 }

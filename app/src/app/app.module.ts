@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 //importamos nuestro servicio 
 import{BikeService} from './services/bike.service';
 import { AdminComponent } from './components/admin/admin.component';
+import { HomeComponent } from './components/home/home.component';
+import{ReactiveFormsModule} from "@angular/forms";
 //decorador NG module indentifica una clase como 
 //modulo de angular ,esto le dice a Angular como debe 
 //compilar e iniciar la aplicacion 
@@ -19,13 +21,14 @@ import { AdminComponent } from './components/admin/admin.component';
   //dentro de declarations ingresamos los componentes de la app
   declarations: [
     AppComponent,
-    AdminComponent
+    AdminComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-AppRoutingModule,
+  AppRoutingModule,
     HttpClientModule,
-    //ReactiveFormsModule agrego el client module a los imports
+    ReactiveFormsModule //agrego el client module a los imports
   ],
  //agregamos el servicio al array de Providers
   providers: [BikeService],

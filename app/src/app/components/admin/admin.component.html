@@ -7,7 +7,7 @@
       <th>Owner Name</th>
       <th>Email</th>
       <th>Model</th>
-      <th class="text-right">Purchase Price</th>
+      <th >Purchase Price</th>
     </tr>
     <!-- for de angular que recorre nuestra lista de bikes -->
     <tr *ngFor="let bike of bikes">
@@ -16,7 +16,7 @@
         <!-- 
         utilizamos interpolacion para traernos todos los 
         atributos de nuestras bicicletas -->
-        {{bike.name}}
+        {{bike.name}}d
       </td>
       <td>
         {{bike.email}}
@@ -24,9 +24,10 @@
       <td>
         {{bike.model}}
       </td>
-      <td class="text-left">
+      <td>
         {{bike.purchasePrice}}
       </td>
+     
     </tr>
   </table>
 </div>
