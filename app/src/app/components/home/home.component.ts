@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   }
   submitRegistration() {
     if (this.bikeform.valid) {
-      this.validMessage = "su formulario de bike se envio con exito AMEGO";
+      this.validMessage = "Su Garantia de bicicleta fue registrada correctamente , Muchas Gracias!";
 this.bikeService.createdBikeRegistration(this.bikeform.value).subscribe(
         data => {
           this.bikeform.reset();
@@ -47,7 +47,7 @@ this.bikeService.createdBikeRegistration(this.bikeform.value).subscribe(
         },
       )
     } else {
-      this.validMessage = "por favor intentalo nuevamente hubo un error"
+      this.validMessage = "Por favor Completa todo el formulario correctamente"
     }
 
 

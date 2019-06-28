@@ -13,6 +13,8 @@ import{BikeService} from './services/bike.service';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import{ReactiveFormsModule} from "@angular/forms";
+import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+
 //decorador NG module indentifica una clase como 
 //modulo de angular ,esto le dice a Angular como debe 
 //compilar e iniciar la aplicacion 
@@ -22,7 +24,9 @@ import{ReactiveFormsModule} from "@angular/forms";
   declarations: [
     AppComponent,
     AdminComponent,
-    HomeComponent
+    HomeComponent,
+    ViewRegistrationComponent,
+ 
   ],
   imports: [
     BrowserModule,

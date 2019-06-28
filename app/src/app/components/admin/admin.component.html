@@ -7,18 +7,19 @@
       <th>Owner Name</th>
       <th>Email</th>
       <th>Model</th>
-      <th >Purchase Price</th>
+      <th>Purchase Price</th>
     </tr>
     <!-- for de angular que recorre nuestra lista de bikes -->
     <tr *ngFor="let bike of bikes">
-      <!-- Utilizamos interpolacion de String -->
+       <td>
+        <!-- agregamos un enlace para vincular con view registration 
+        y mostrar un registro en particular -->
+        <a [routerLink]="['/admin/view',bike.id]">{{bike.name}}</a>
+      </td>
       <td>
         <!-- 
         utilizamos interpolacion para traernos todos los 
         atributos de nuestras bicicletas -->
-        {{bike.name}}d
-      </td>
-      <td>
         {{bike.email}}
       </td>
       <td>
@@ -27,7 +28,7 @@
       <td>
         {{bike.purchasePrice}}
       </td>
-     
+
     </tr>
   </table>
 </div>

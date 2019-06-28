@@ -31,7 +31,7 @@ export class BikeService {
    getBike(id:number){
      return this.http.get('/server/api/v1/bikes/'+id);
    }
-//POST : crear una bicicleta con un registro de formulario angular;
+//POST : crear una bicicleta con un registro de formulario ang ular;
 //recibimos una bike del front end y lo emviamos al back end para 
 //alojarlo en SQLite
 //llamamos a la ruta 
